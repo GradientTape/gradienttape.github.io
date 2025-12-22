@@ -8,20 +8,31 @@
 </head>
 
 <body>
-    <nav class="main-menu">
-        <div class="brand">
-            <img src="https://github.com/gradienttape.png" />
-            <span>Gradient Tape</span>
-        </div>
-        <div>
-            <ul>
-                <li>All Posts</li>
-                <li>Free Youtube Videos</li>
-            </ul>
-        </div>
-    </nav>
+    <div id="main-menu-container">
+        <nav class="main-menu">
+            <div class="brand">
+                <a href="/">
+                    <img src="https://github.com/gradienttape.png" />
+                    <span>Gradient Tape</span>
+                </a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="/posts">All Posts</a></li>
+                    <li><a href="https://youtube.com/@gradienttape" target="_blank">Free Youtube Videos</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
 
     {% block body %}{% endblock %}
+
+    <div id="main-footer-container">
+        <footer class="main-footer">
+            <div>&copy; Gradient Tape</div>
+        </footer>
+    </div>
 </body>
 
 </html>

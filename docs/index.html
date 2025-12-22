@@ -5,25 +5,41 @@
     <meta charset="utf-8">
     <style>:root {
     --border-color: rgb(232, 235, 238);
+    --background-color-hover: rgb(242, 245, 248);
+
+    --content-max-width: 1200px;
 }
 
 html,
 body {
     margin: 0;
     width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* Navbar */
+
+#main-menu-container {
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav.main-menu {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--border-color);
     justify-content: space-between;
+    max-width: var(--content-max-width);
+    flex: 1;
 }
 
-nav.main-menu .brand {
+nav.main-menu .brand a {
     display: flex;
     align-items: center;
     padding: 8px 22px;
+    text-decoration: none;
+    color: inherit;
 }
 
 nav.main-menu .brand img {
@@ -40,32 +56,74 @@ nav.main-menu ul {
     align-items: center;
     padding: 0;
     margin: 0;
+    padding-right: 11px;
 }
 
 nav.main-menu li {
     margin: 0;
+}
+
+nav.main-menu li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
     padding: 8px 11px;
+}
+
+nav.main-menu li a:hover {
+    background-color: var(--background-color-hover);
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+/* Footer */
+
+#main-footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer.main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--content-max-width);
+    box-sizing: border-box;
+    flex: 1;
+    padding: 8px 22px;
 }</style>
     
-<title>Gradient Tape</title>
+<title>Home - Gradient Tape</title>
 
 </head>
 
 <body>
-    <nav class="main-menu">
-        <div class="brand">
-            <img src="https://github.com/gradienttape.png" />
-            <span>Gradient Tape</span>
-        </div>
-        <div>
-            <ul>
-                <li>All Posts</li>
-                <li>Free Youtube Videos</li>
-            </ul>
-        </div>
-    </nav>
+    <div id="main-menu-container">
+        <nav class="main-menu">
+            <div class="brand">
+                <a href="/">
+                    <img src="https://github.com/gradienttape.png" />
+                    <span>Gradient Tape</span>
+                </a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="/posts">All Posts</a></li>
+                    <li><a href="https://youtube.com/@gradienttape" target="_blank">Free Youtube Videos</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
 
     
+
+    <div id="main-footer-container">
+        <footer class="main-footer">
+            <div>&copy; Gradient Tape</div>
+        </footer>
+    </div>
 </body>
 
 </html>
