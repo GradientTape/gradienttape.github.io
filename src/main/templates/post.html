@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>{{ title }} - Gradient Tape</title>
+{% endblock %}
+
+{% block body %}
+<div class="post">
+    <img class="cover" src="{{ cover_img }}">
+    <h1>{{ title }}</h1>
+    <div>{{ text }}</div>
+</div>
+{% endblock %}

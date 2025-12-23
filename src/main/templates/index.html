@@ -3,3 +3,29 @@
 {% block head %}
 <title>Home - Gradient Tape</title>
 {% endblock %}
+
+{% block body %}
+
+<h2 class="p22">Featured posts</h2>
+<div class="featured-posts-container p22">
+    {% for post in featured_posts %}
+    <a class="featured-post" href="/posts/{{ post.slug }}.html">
+        <div class="cover" style="background-image: url({{ post.cover_img }})"></div>
+        <div class="title">{{ post.title }}</div>
+        <div class="description">{{ post.description }}</div>
+    </a>
+    {% endfor %}
+</div>
+
+<h2 class="p22">Recent posts</h2>
+<div class="recent-posts-container p22">
+    {% for post in recent_posts %}
+    <div class="recent-post">
+        <a class="title" href="/posts/{{ post.slug }}.html">{{ post.title }}</a>
+        <div class="description">{{ post.description }}</div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

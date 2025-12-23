@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>{% include "site.css" %}</style>
     {% block head %}{% endblock %}
 </head>
@@ -18,15 +19,19 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="/posts">All Posts</a></li>
+                    <li><a href="/posts_1.html">All Posts</a></li>
                     <li><a href="https://youtube.com/@gradienttape" target="_blank">Free Youtube Videos</a></li>
                 </ul>
             </div>
         </nav>
-
     </div>
 
-    {% block body %}{% endblock %}
+    <div class="main-container">
+        <div class="main">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+
 
     <div id="main-footer-container">
         <footer class="main-footer">
