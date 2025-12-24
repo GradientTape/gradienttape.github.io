@@ -11,7 +11,8 @@ ALL_POSTS = [
         "cover": "https://i.imgur.com/cXE2Lig.jpeg",
         "path": "test.md",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.",
-        "published_at": "2025-12-22"
+        "published_at": "2025-12-22",
+        "tags": [],
     },
     {
         "title": "Test Post #2",
@@ -19,7 +20,8 @@ ALL_POSTS = [
         "cover": "https://i.imgur.com/cXE2Lig.jpeg",
         "path": "test.md",
         "description": "Lorem ipsum dolor sit amet.",
-        "published_at": "2025-12-22"
+        "published_at": "2025-12-22",
+        "tags": [],
     }
 ]
 

@@ -10,6 +10,7 @@ def read_post_data(path):
 
 class BlogPost:
     def __init__(self, data):
+        self.validate(data)
         self.title = data['title']
         self.slug = data['slug']
         self.description = data['description']
@@ -25,4 +26,14 @@ class BlogPost:
                 title=self.title, 
                 cover_img=self.cover_img,
                 text=self.text))
+        
+    def validate(self, data):
+        required_fields = [
+            'title', 'slug', 'description', 'published_at', 
+            'cover', 'path', 'tags'
+        ]
+
+        for field in required_fields:
+            if data.get(field) is None:
+                raise RuntimeError("missing '%s' field in post data" % field)
 

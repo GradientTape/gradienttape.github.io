@@ -16,6 +16,11 @@
     --footer-color: #f0f0f0;
 }
 
+::selection {
+    color: black;
+    background-color: var(--yellow-color);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +31,9 @@ html,
 body {
     margin: 0;
     width: 100%;
+    background-color: #fefefe;
+    background-image: radial-gradient(#404344 1px, #fdfdfd 1px);
+    background-size: 30px 30px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
@@ -44,10 +52,21 @@ a:hover {
     padding: 22px;
 }
 
+.mt22 {
+    margin-top: 22px;
+}
+
+.base-section {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin: 22px;
+}
+
 /* Navbar */
 
 #main-menu-container {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--dark-yellow-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +93,7 @@ nav.main-menu .brand img {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--dark-yellow-color);
     margin-right: 8px;
 }
 
@@ -183,7 +202,8 @@ footer.main-footer {
 }
 
 .featured-post:hover {
-    box-shadow: var(--card-box-shadow);
+    border-color: var(--dark-yellow-color);
+    box-shadow: 2px 2px var(--dark-yellow-color);
     text-decoration: none;
 }
 
@@ -224,7 +244,7 @@ footer.main-footer {
 .post-pagination-wrapper {
     display: flex;
     justify-content: center;
-    padding-top: 22px;
+    padding: 22px;
     border-top: 1px solid var(--border-color);
 }
 
@@ -290,94 +310,96 @@ footer.main-footer {
         <div class="main">
             
 
-<h2 class="p22"></h2>
-<div class="recent-posts-container p22">
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test.html">Test Post #1</a>
-        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test_2.html">Test Post #2</a>
-        <div class="description">Lorem ipsum dolor sit amet.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test.html">Test Post #1</a>
-        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test_2.html">Test Post #2</a>
-        <div class="description">Lorem ipsum dolor sit amet.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test.html">Test Post #1</a>
-        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test_2.html">Test Post #2</a>
-        <div class="description">Lorem ipsum dolor sit amet.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test.html">Test Post #1</a>
-        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test_2.html">Test Post #2</a>
-        <div class="description">Lorem ipsum dolor sit amet.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test.html">Test Post #1</a>
-        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test_2.html">Test Post #2</a>
-        <div class="description">Lorem ipsum dolor sit amet.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test.html">Test Post #1</a>
-        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test_2.html">Test Post #2</a>
-        <div class="description">Lorem ipsum dolor sit amet.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test.html">Test Post #1</a>
-        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test_2.html">Test Post #2</a>
-        <div class="description">Lorem ipsum dolor sit amet.</div>
-    </div>
-    
-    <div class="recent-post">
-        <a class="title" href="/posts/test.html">Test Post #1</a>
-        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
-    </div>
-    
-</div>
-<div class="post-pagination-wrapper">
-    <div class="post-pagination-container">
+<div class="base-section mt22">
+    <h2 class="p22"></h2>
+    <div class="recent-posts-container p22">
         
-        <a class="prev" href="/posts_6.html">&lt; Previous</a>
+        <div class="recent-post">
+            <a class="title" href="/posts/test.html">Test Post #1</a>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
+        </div>
         
+        <div class="recent-post">
+            <a class="title" href="/posts/test_2.html">Test Post #2</a>
+            <div class="description">Lorem ipsum dolor sit amet.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test.html">Test Post #1</a>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test_2.html">Test Post #2</a>
+            <div class="description">Lorem ipsum dolor sit amet.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test.html">Test Post #1</a>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test_2.html">Test Post #2</a>
+            <div class="description">Lorem ipsum dolor sit amet.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test.html">Test Post #1</a>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test_2.html">Test Post #2</a>
+            <div class="description">Lorem ipsum dolor sit amet.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test.html">Test Post #1</a>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test_2.html">Test Post #2</a>
+            <div class="description">Lorem ipsum dolor sit amet.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test.html">Test Post #1</a>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test_2.html">Test Post #2</a>
+            <div class="description">Lorem ipsum dolor sit amet.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test.html">Test Post #1</a>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test_2.html">Test Post #2</a>
+            <div class="description">Lorem ipsum dolor sit amet.</div>
+        </div>
+        
+        <div class="recent-post">
+            <a class="title" href="/posts/test.html">Test Post #1</a>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.</div>
+        </div>
+        
+    </div>
+    <div class="post-pagination-wrapper">
+        <div class="post-pagination-container">
+            
+            <a class="prev" href="/posts_6.html">&lt; Previous</a>
+            
 
-        
-        <a class="next" href="/posts_8.html">Next &gt;</a>
-        
+            
+            <a class="next" href="/posts_8.html">Next &gt;</a>
+            
+        </div>
     </div>
 </div>
 
