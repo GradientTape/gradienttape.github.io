@@ -18,17 +18,13 @@
     </div>
     <div class="post-pagination-wrapper">
         <div class="post-pagination-container">
-            {% if not is_first_page %}
-            <a class="prev" href="/posts_{{ current_page - 1 }}.html">&lt; Previous</a>
+            {% for page_index in range(1, total_pages + 1) %}
+            {% if page_index == current_page %}
+            <a class="current_page" href="/posts_{{ page_index }}.html">{{ page_index }}</a>
             {% else %}
-            <a class="prev disabled" href="#">&lt; Previous</a>
+            <a href="/posts_{{ page_index }}.html">{{ page_index }}</a>
             {% endif %}
-
-            {% if has_next_page %}
-            <a class="next" href="/posts_{{ current_page + 1 }}.html">Next &gt;</a>
-            {% else %}
-            <a class="next disabled" href="#">Next &gt;</a>
-            {% endif %}
+            {% endfor %}
         </div>
     </div>
 </div>

@@ -1,6 +1,8 @@
 from blog_post import BlogPost
 from utils import my_write
 
+import math
+
 
 PAGE_SIZE = 15
 RECENT_COUNT = 15
@@ -29,6 +31,7 @@ class MySite:
         index = 0
         current_page = 0
         ordered_posts = self.get_ordered_posts()
+        total_pages = int(math.ceil(len(ordered_posts) / PAGE_SIZE))
         while index < len(ordered_posts):
             posts = ordered_posts[index : index + PAGE_SIZE]
             index += PAGE_SIZE
@@ -36,10 +39,10 @@ class MySite:
             my_write(
                 'posts_%d.html' % current_page, 
                 template.render(
+                    title="All posts",
                     posts=posts, 
                     current_page=current_page,
-                    is_first_page=current_page == 1, 
-                    has_next_page=index < len(ordered_posts)))
+                    total_pages=total_pages))
 
 
     def get_featured_posts(self):

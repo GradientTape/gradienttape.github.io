@@ -8,6 +8,7 @@
     --yellow-color: #ffc93c;
     --dark-yellow-color: #ff9a3c;
     --footer-color: #f0f0f0;
+    --indigo-color: rgb(97, 85, 245);
 }
 
 ::selection {
@@ -37,12 +38,11 @@ body {
 }
 
 a {
-    color: var(--yellow-color);
+    color: var(--indigo-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--dark-yellow-color);
     text-decoration: underline;
 }
 
@@ -253,40 +253,28 @@ footer.main-footer {
     justify-content: center;
     padding: 22px;
     border-top: 1px solid var(--border-color);
+    background-color: var(--footer-color);
 }
 
 .post-pagination-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 0;
+    display: flex;
 }
 
-.post-pagination-container .prev,
-.post-pagination-container .next {
+.post-pagination-container a {
     display: flex;
+    padding: 2px;
+    border: 1px solid var(--border-color);
+    width: 44px;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--border-color);
-    padding: 8px 22px;
-}
-
-.post-pagination-container .prev {
-    border-right: none;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
-
-.post-pagination-container .next {
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-.post-pagination-container .disabled {
-    background-color: var(--border-color);
-}
-
-.post-pagination-container .disabled {
+    margin: 2px;
+    padding: 2px 8px;
     color: inherit;
     text-decoration: none;
-    cursor: not-allowed;
+    background-color: white;
+}
+
+.post-pagination-container a.current_page {
+    background-color: var(--yellow-color);
+    border-color: var(--dark-yellow-color);
 }
