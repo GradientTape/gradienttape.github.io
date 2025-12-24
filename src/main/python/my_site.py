@@ -46,10 +46,10 @@ class MySite:
 
 
     def get_featured_posts(self):
-        return self.posts
+        return [post for post in self.get_ordered_posts() if post.is_featured]
     
     def get_recent_posts(self):
-        return self.get_ordered_posts()[:RECENT_COUNT]
+        return [post for post in self.get_ordered_posts() if not post.is_featured][:RECENT_COUNT]
     
     def get_ordered_posts(self):
-        return self.posts * 100
+        return sorted(self.posts, key=lambda p:p.published_at, reverse=True)

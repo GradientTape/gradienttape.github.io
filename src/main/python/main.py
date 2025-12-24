@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
 
 from my_site import *
@@ -11,7 +12,7 @@ ALL_POSTS = [
         "cover": "https://i.imgur.com/cXE2Lig.jpeg",
         "path": "test.md",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci id metus consequat gravida. Duis nec mauris laoreet, facilisis libero nec, tempus quam. Fusce eleifend tempus ipsum.",
-        "published_at": "2025-12-22",
+        "published_at": datetime(2025, 12, 1),
         "tags": [],
     },
     {
@@ -20,8 +21,9 @@ ALL_POSTS = [
         "cover": "https://i.imgur.com/cXE2Lig.jpeg",
         "path": "test.md",
         "description": "Lorem ipsum dolor sit amet.",
-        "published_at": "2025-12-22",
+        "published_at": datetime(2025, 9, 1),
         "tags": [],
+        "is_featured": True,
     }
 ]
 

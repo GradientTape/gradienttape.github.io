@@ -6,6 +6,7 @@
 
 {% block body %}
 
+{% if featured_posts %}
 <div class="base-section mt22">
     <h2 class="p22">Featured posts</h2>
     <div class="featured-posts-container p22">
@@ -18,7 +19,9 @@
         {% endfor %}
     </div>
 </div>
+{% endif %}
 
+{% if recent_posts %}
 <div class="base-section mt22">
     <h2 class="p22">Recent posts</h2>
     <div class="recent-posts-container p22">
@@ -30,6 +33,6 @@
         {% endfor %}
     </div>
 </div>
-
+{% endif %}
 
 {% endblock %}

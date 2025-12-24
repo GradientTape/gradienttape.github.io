@@ -17,6 +17,7 @@ class BlogPost:
         self.published_at = data['published_at']
         self.cover_img = data.get('cover')
         self.text = read_post_data(data['path'])
+        self.is_featured = data.get('is_featured', False)
 
     def render(self, environment):
         template = environment.get_template('post.html')
